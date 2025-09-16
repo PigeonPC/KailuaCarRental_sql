@@ -1,8 +1,6 @@
 USE kailua_car_rental;
 
 
-
-
 CREATE TABLE IF NOT EXISTS car_types
 (
     car_type_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -88,7 +86,6 @@ CREATE TABLE IF NOT EXISTS renter_contract
     FOREIGN KEY (renter_id) REFERENCES renters (renter_id),
     FOREIGN KEY (car_id) REFERENCES cars (car_id)
 );
-
 
 INSERT INTO renter_contract (from_date_time, to_date_time, max_km, km_when_rental_start, renter_id, car_id)
 VALUES
